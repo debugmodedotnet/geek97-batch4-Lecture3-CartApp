@@ -1,0 +1,20 @@
+
+<div class="row">
+    <h2 class="text-center text-info">Products</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Avaiable</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tr *ngFor="let p of products">
+            <td>{{p.Title | uppercase}}</td>
+            <td>{{p.Price | currency:"&#8377;"}}</td>
+            <td>{{p.Quantity}}</td>
+            <td><button class="btn btn-warning" (click)="addToCart(p)">Add to Cart</button></td>
+        </tr>
+    </table>
+</div>
